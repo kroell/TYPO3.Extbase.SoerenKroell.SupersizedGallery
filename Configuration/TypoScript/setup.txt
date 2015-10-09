@@ -1,0 +1,63 @@
+plugin.tx_sksupersizedgallery {
+	view {
+		templateRootPath = {$plugin.tx_sksupersizedgallery.view.templateRootPath}
+		partialRootPath = {$plugin.tx_sksupersizedgallery.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_sksupersizedgallery.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_sksupersizedgallery.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+}
+
+plugin.tx_sksupersizedgallery._CSS_DEFAULT_STYLE (
+	textarea.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	input.f3-form-error {
+		background-color:#FF9F9F;
+		border: 1px #FF0000 solid;
+	}
+
+	.tx-sk-supersized-gallery table {
+		border-collapse:separate;
+		border-spacing:10px;
+	}
+
+	.tx-sk-supersized-gallery table th {
+		font-weight:bold;
+	}
+
+	.tx-sk-supersized-gallery table td {
+		vertical-align:top;
+	}
+)
+
+page.includeCSS.file11 = EXT:sk_supersized_gallery/Resources/Public/Stylesheets/supersized.css 
+page.includeCSS.file12 = EXT:sk_supersized_gallery/Resources/Public/Stylesheets/supersized.shutter.css
+  
+  
+#page.includeJS.jq = http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js 
+#page.includeJS.jq.external = 1
+#page.includeJS.supersized = fileadmin/templates/js/supersized.3.2.7.min.js
+
+
+page {
+		
+	includeJS {
+		jquery = http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js 
+		jquery.external = 1
+
+		isotope = EXT:sk_supersized_gallery/Resources/Public/Javascript/supersized.3.2.7.min.js
+		isotope.excludeFromConcatenation = 1
+		isotope.disableCompression = 1
+		
+
+	}
+	
+}

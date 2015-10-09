@@ -1,0 +1,14 @@
+plugin.tx_sksupersizedgallery {
+	view {
+		# cat=plugin.tx_sksupersizedgallery/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:sk_supersized_gallery/Resources/Private/Templates/
+		# cat=plugin.tx_sksupersizedgallery/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:sk_supersized_gallery/Resources/Private/Partials/
+		# cat=plugin.tx_sksupersizedgallery/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:sk_supersized_gallery/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_sksupersizedgallery//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
